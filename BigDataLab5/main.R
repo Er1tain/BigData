@@ -58,3 +58,14 @@ cost_of_living_index <- matrix(as.numeric(cost_of_living_index), ncol = 8)
 barplot(cost_of_living_index, main="Health Care Index", names.arg=c(2014:2021),
       xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
 )
+
+
+
+
+property_price_to_income_ratio <- matrix(c(indexes_values2014[6, ], indexes_values2015[6, ], indexes_values2016[6, ], indexes_values2017[6, ], indexes_values2018[6, ],
+   indexes_values2019[6, ], indexes_values2020[6, ], indexes_values2021[6, ]
+), byrow = FALSE, ncol = 5, nrow = 8)
+property_price_to_income_ratio <- matrix(as.numeric(property_price_to_income_ratio), ncol = 8)
+barplot(property_price_to_income_ratio, main="Property Price To Income Ratio", names.arg=c(2014:2021),
+      xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
+)
