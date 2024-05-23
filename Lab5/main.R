@@ -1,5 +1,5 @@
 library(rvest)
-source("BigDataLab5/ScrappingFunction.R")
+source("Lab5/ScrappingFunction.R")
 
 indexes_values2014 <- ScrappingData(2014)
 indexes_values2015 <- ScrappingData(2015)

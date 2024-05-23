@@ -1,4 +1,4 @@
-source("BigDataLab5/GetDataCountry.R")
+source("Lab5/GetDataCountry.R")
 
 ScrappingData <- function(year) {
     url = sprintf("https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=%s", year)
