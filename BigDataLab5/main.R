@@ -1,24 +1,20 @@
 library(rvest)
-source("BigDataLab5/GetDataCountry.R")
+source("BigDataLab5/ScrappingFunction.R")
 
-#Канада, США, Турция, Греция, Израиль
-url = "https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2021"
-download.file(url, destfile = "index.html", quiet = TRUE)
-content <- read_html("index.html")
-nodes = html_nodes(content, 'table')
-df = html_table(nodes[[2]]) %>% as.data.frame()
+indexes_values2014 <- ScrappingData(2014)
+indexes_values2015 <- ScrappingData(2015)
+indexes_values2016 <- ScrappingData(2016)
+indexes_values2017 <- ScrappingData(2017)
+indexes_values2018 <- ScrappingData(2018)
+indexes_values2019 <- ScrappingData(2019)
+indexes_values2020 <- ScrappingData(2020)
+indexes_values2021 <- ScrappingData(2021)
 
-Canada <- getDataCountry("Canada")
-print(Canada)
+quality_of_life_index <-matrix(c(indexes_values2014[1, ], indexes_values2015[1, ], indexes_values2016[1, ], indexes_values2017[1, ], indexes_values2018[1, ],
+   indexes_values2019[1, ], indexes_values2020[1, ], indexes_values2021[1, ]
+), byrow = FALSE, ncol = 5, nrow = 8)
+quality_of_life_index <- matrix(as.numeric(quality_of_life_index), ncol = 8)
 
-United_States <- getDataCountry("United States")
-print(United_States)
-
-Turkey <- getDataCountry("Turkey")
-print(Turkey)
-
-Greece <- getDataCountry("Greece")
-print(Greece)
-
-Israel <- getDataCountry("Israel")
-print(Israel)
+barplot(quality_of_life_index, main="Quality Of Life Index", names.arg=c(2014:2021),
+      xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
+)
