@@ -38,3 +38,13 @@ safety_index <- matrix(as.numeric(safety_index), ncol = 8)
 barplot(safety_index, main="Safety Index", names.arg=c(2014:2021),
       xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
 )
+
+
+
+health_care_index <- matrix(c(indexes_values2014[4, ], indexes_values2015[4, ], indexes_values2016[4, ], indexes_values2017[4, ], indexes_values2018[4, ],
+   indexes_values2019[4, ], indexes_values2020[4, ], indexes_values2021[4, ]
+), byrow = FALSE, ncol = 5, nrow = 8)
+health_care_index <- matrix(as.numeric(health_care_index), ncol = 8)
+barplot(health_care_index, main="Health Care Index", names.arg=c(2014:2021),
+      xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
+)
