@@ -69,3 +69,16 @@ property_price_to_income_ratio <- matrix(as.numeric(property_price_to_income_rat
 barplot(property_price_to_income_ratio, main="Property Price To Income Ratio", names.arg=c(2014:2021),
       xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
 )
+
+
+
+
+traffic_commute_time_index <- matrix(c(indexes_values2014[7, ], indexes_values2015[7, ], indexes_values2016[7, ], indexes_values2017[7, ], indexes_values2018[7, ],
+   indexes_values2019[7, ], indexes_values2020[7, ], indexes_values2021[7, ]
+), byrow = FALSE, ncol = 5, nrow = 8)
+traffic_commute_time_index <- matrix(as.numeric(traffic_commute_time_index), ncol = 8)
+barplot(traffic_commute_time_index, main="Traffic Commute_Time Index", names.arg=c(2014:2021),
+      xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
+)
+
+
