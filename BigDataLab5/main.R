@@ -93,3 +93,12 @@ barplot(pollution_index, main="Pollution Index", names.arg=c(2014:2021),
 )
 
 
+
+
+climate_index <- matrix(c(indexes_values2014[9, ], indexes_values2015[9, ], indexes_values2016[9, ], indexes_values2017[9, ], indexes_values2018[9, ],
+   indexes_values2019[9, ], indexes_values2020[9, ], indexes_values2021[9, ]
+), byrow = FALSE, ncol = 5, nrow = 8)
+climate_index <- matrix(as.numeric(climate_index), ncol = 8)
+barplot(climate_index, main="Climate Index", names.arg=c(2014:2021),
+      xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
+)
