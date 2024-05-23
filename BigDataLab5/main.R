@@ -48,3 +48,13 @@ health_care_index <- matrix(as.numeric(health_care_index), ncol = 8)
 barplot(health_care_index, main="Health Care Index", names.arg=c(2014:2021),
       xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
 )
+
+
+
+cost_of_living_index <- matrix(c(indexes_values2014[5, ], indexes_values2015[5, ], indexes_values2016[5, ], indexes_values2017[5, ], indexes_values2018[5, ],
+   indexes_values2019[5, ], indexes_values2020[5, ], indexes_values2021[5, ]
+), byrow = FALSE, ncol = 5, nrow = 8)
+cost_of_living_index <- matrix(as.numeric(cost_of_living_index), ncol = 8)
+barplot(cost_of_living_index, main="Health Care Index", names.arg=c(2014:2021),
+      xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
+)
