@@ -14,10 +14,10 @@ quality_of_life_index <-matrix(c(indexes_values2014[1, ], indexes_values2015[1, 
    indexes_values2019[1, ], indexes_values2020[1, ], indexes_values2021[1, ]
 ), byrow = FALSE, ncol = 5, nrow = 8)
 quality_of_life_index <- matrix(as.numeric(quality_of_life_index), ncol = 8)
-
 barplot(quality_of_life_index, main="Quality Of Life Index", names.arg=c(2014:2021),
       xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
 )
+
 
 
 
@@ -25,7 +25,16 @@ purchasing_power_index <- matrix(c(indexes_values2014[2, ], indexes_values2015[2
    indexes_values2019[2, ], indexes_values2020[2, ], indexes_values2021[2, ]
 ), byrow = FALSE, ncol = 5, nrow = 8)
 purchasing_power_index <- matrix(as.numeric(purchasing_power_index), ncol = 8)
-
 barplot(purchasing_power_index, main="Purchasing Power Index", names.arg=c(2014:2021),
+      xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
+)
+
+
+
+safety_index <- matrix(c(indexes_values2014[3, ], indexes_values2015[3, ], indexes_values2016[3, ], indexes_values2017[3, ], indexes_values2018[3, ],
+   indexes_values2019[3, ], indexes_values2020[3, ], indexes_values2021[3, ]
+), byrow = FALSE, ncol = 5, nrow = 8)
+safety_index <- matrix(as.numeric(safety_index), ncol = 8)
+barplot(safety_index, main="Safety Index", names.arg=c(2014:2021),
       xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
 )
