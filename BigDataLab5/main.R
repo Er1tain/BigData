@@ -82,3 +82,14 @@ barplot(traffic_commute_time_index, main="Traffic Commute_Time Index", names.arg
 )
 
 
+
+
+pollution_index <- matrix(c(indexes_values2014[8, ], indexes_values2015[8, ], indexes_values2016[8, ], indexes_values2017[8, ], indexes_values2018[8, ],
+   indexes_values2019[8, ], indexes_values2020[8, ], indexes_values2021[8, ]
+), byrow = FALSE, ncol = 5, nrow = 8)
+pollution_index <- matrix(as.numeric(pollution_index), ncol = 8)
+barplot(pollution_index, main="Pollution Index", names.arg=c(2014:2021),
+      xlab="Year", ylab="Value", col = c("red", "blue", "orange", "lightblue", "purple"), beside = TRUE
+)
+
+
